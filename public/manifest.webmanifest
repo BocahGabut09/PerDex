@@ -1,0 +1,35 @@
+{
+  "theme_color": "#170b2b",
+  "background_color": "#08070d",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "PerDex — Manga, Manhwa, dan Manhua",
+  "short_name": "PerDex",
+  "description": "Jelajahi manga, manhwa, dan manhua. Simpan bacaan favorit di perangkatmu.",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait"
+}

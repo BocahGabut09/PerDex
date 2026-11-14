@@ -1,0 +1,74 @@
+@import "nprogress/nprogress.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --perdex-bg: #0b0614;
+  --perdex-panel: #160d27;
+  --perdex-panel-raised: #211238;
+  --perdex-accent: #a855f7;
+  --perdex-accent-bright: #c084fc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; width: 100%; max-width: 100%; overflow-x: hidden; }
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(126, 34, 206, .18), transparent 34rem),
+    radial-gradient(ellipse at 92% 18%, rgba(88, 28, 135, .13), transparent 30rem),
+    var(--perdex-bg);
+  color: #f7f2ff;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection { background: rgba(168, 85, 247, .42); color: #fff; }
+
+#nprogress .bar {
+  height: 3px !important;
+  background: var(--perdex-accent-bright) !important;
+  box-shadow: 0 0 14px rgba(192, 132, 252, .65);
+}
+#nprogress .peg { box-shadow: 0 0 10px var(--perdex-accent-bright) !important; }
+#nprogress .spinner .spinner-icon {
+  border-top-color: var(--perdex-accent-bright);
+  border-left-color: var(--perdex-accent-bright);
+}
+
+#customScrollThumb { scrollbar-width: thin; scrollbar-color: #8b5cf6 #1a1029; }
+#customScrollThumb::-webkit-scrollbar { width: 6px; }
+#customScrollThumb::-webkit-scrollbar-track { background: #1a1029; }
+#customScrollThumb::-webkit-scrollbar-thumb { border-radius: 99px; background: #8b5cf6; }
+
+.mySwiper, .swiper { width: 100%; max-width: 100%; min-width: 0; overflow: hidden !important; }
+.swiper-wrapper { min-width: 0; }
+main, section, header, footer { min-width: 0; max-width: 100%; }
+img { max-width: 100%; }
+
+@media (max-width: 639px) {
+  body { font-size: 14px; }
+  .mySwiper, .swiper { overflow: hidden !important; max-width: 100%; }
+  main { width: 100%; max-width: 100%; }
+}
+
+/* Reader-only themes; the rest of PerDex keeps its purple-dark design. */
+.reader-theme-amoled { background: #000 !important; color: #f8f7fb; }
+.reader-theme-light { background: #f4f1f9 !important; color: #241a31; color-scheme: light; }
+.reader-theme-light [class*="bg-[#100d18]"],
+.reader-theme-light [class*="bg-[#0d0a14]"],
+.reader-theme-light [class*="bg-[#1a1227]"],
+.reader-theme-light [class*="bg-[#211b30]"] { background-color: #fff !important; }
+.reader-theme-light .text-white,
+.reader-theme-light .text-slate-100,
+.reader-theme-light .text-slate-200 { color: #241a31 !important; }
+.reader-theme-light .text-slate-300,
+.reader-theme-light .text-slate-400 { color: #5d5368 !important; }
+.reader-theme-light [class*="border-white/"] { border-color: rgba(46, 32, 62, .14) !important; }
+.reader-theme-light select { background-color: #fff !important; color: #241a31 !important; }
