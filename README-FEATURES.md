@@ -26,11 +26,10 @@
 - Notifikasi chapter baru berbasis polling ketika tab PerDex terbuka/fokus.
 - Statistik aktivitas membaca.
 - Simpan chapter offline ke IndexedDB.
-- Kalender rilis (menampilkan data dari `perdex_release_schedule`).
 - Laporan masalah chapter langsung dari reader.
 - Koleksi pribadi, lokal untuk tamu dan cloud untuk akun.
 - Trending Komik dari feed populer REST API.
-- Editor's Choice dari `perdex_editor_picks`.
+- Admin Page privat untuk akun Google `brooscraft9@gmail.com`: moderasi review, penanganan laporan, dan pemeriksaan status REST API.
 - Pencarian judul dengan filter tipe dan genre.
 - Rekomendasi komik berdasarkan genre.
 - Tema reader Dark, AMOLED Black, dan Light.
@@ -38,7 +37,7 @@
 
 ## Catatan operasional
 
-Google OAuth, email confirmation, SMTP, dan CAPTCHA perlu diaktifkan/dikonfigurasi di Supabase Dashboard. Editor's Choice dan Kalender Rilis memerlukan data yang diisi admin ke tabelnya. Notifikasi pada versi ini tidak berjalan di background ketika tab tertutup. Download offline bergantung pada izin CORS host gambar. Lihat `SETUP-SUPABASE-PERDEX.md` sebelum deploy.
+Google OAuth, email confirmation, SMTP, dan CAPTCHA perlu diaktifkan/dikonfigurasi di Supabase Dashboard. Admin Page membutuhkan migrasi SQL `SUPABASE-ADMIN-PERDEX.sql` agar kebijakan RLS diterapkan. Notifikasi pada versi ini tidak berjalan di background ketika tab tertutup. Download offline bergantung pada izin CORS host gambar. Lihat `SETUP-SUPABASE-PERDEX.md` sebelum deploy.
 
 ## API yang digunakan
 

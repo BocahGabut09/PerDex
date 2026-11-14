@@ -20,6 +20,13 @@ Kunci publishable/anon memang boleh berada di browser. Jangan pernah memasukkan 
 4. Authentication → Security and Protection → CAPTCHA: aktifkan Turnstile dan masukkan **secret key** dari Cloudflare. Site key pasang pada `NEXT_PUBLIC_TURNSTILE_SITE_KEY` di Vercel.
 5. Untuk email konfirmasi yang lebih andal, atur SMTP sendiri pada Authentication → Emails → SMTP Settings.
 
+## Admin Page
+
+- Hanya akun Google `brooscraft9@gmail.com` yang lolos verifikasi server untuk membuka `/admin`.
+- Admin dapat melihat ringkasan review/laporan, menyembunyikan atau menampilkan review, menghapus review, menandai laporan selesai, dan memeriksa koneksi Komiku REST API.
+- Setelah mengaktifkan Google OAuth, jalankan seluruh isi file `SUPABASE-ADMIN-PERDEX.sql` di Supabase Dashboard → SQL Editor. SQL tersebut menambahkan kolom status laporan dan kebijakan RLS khusus admin pada tabel PerDex review/laporan.
+- Menu Admin Page hanya ditampilkan di navbar setelah akses akun terverifikasi. Pengguna lain yang membuka URL secara langsung tetap ditolak.
+
 Google OAuth, CAPTCHA, konfirmasi email, dan SMTP tidak dapat dinyalakan hanya dari kode frontend; pengaturan dashboard di atas tetap harus dilakukan pemilik project.
 
 ## Cara kerja data
@@ -31,8 +38,7 @@ Google OAuth, CAPTCHA, konfirmasi email, dan SMTP tidak dapat dinyalakan hanya d
 
 ## Batasan / data yang perlu diisi
 
-- `perdex_editor_picks` perlu diisi admin agar bagian Editor's Choice tampil.
-- `perdex_release_schedule` perlu diisi dengan data jadwal rilis yang valid agar kalender tidak kosong.
+- Admin Page memerlukan Google OAuth aktif dan SQL kebijakan admin yang disertakan dalam ZIP.
 - Notifikasi chapter pada versi ini memeriksa update selama PerDex terbuka/fokus (polling berkala), bukan push notification background.
 - Download offline menyimpan gambar chapter ke IndexedDB; dapat gagal pada sumber gambar yang memblokir CORS atau menghalangi pengunduhan.
 - Rekomendasi serupa mengambil komik dari genre yang sama jika data genre tersedia.

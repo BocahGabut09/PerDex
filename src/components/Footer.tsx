@@ -16,7 +16,6 @@ export default function Footer() {
           <Link href="/profile" className="transition hover:text-violet-200">Bookmark</Link>
           <Link href="/collections" className="transition hover:text-violet-200">Koleksi</Link>
           <Link href="/history" className="transition hover:text-violet-200">History</Link>
-          <Link href="/calendar" className="transition hover:text-violet-200">Kalender</Link>
           <Link href="/statistics" className="transition hover:text-violet-200">Statistik</Link>
           <Link href="/offline" className="transition hover:text-violet-200">Offline</Link>
           <Link href="/donasi" className="transition hover:text-violet-200">Donasi</Link>

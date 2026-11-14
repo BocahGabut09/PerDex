@@ -56,13 +56,9 @@ export default function Homepage() {
         <ContinueReading />
 
         <section className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {[{ title: "Trending Komik", detail: "Lihat bacaan yang sedang populer", href: "/discover" }, { title: "Kalender Rilis", detail: "Pantau jadwal chapter terbaru", href: "/calendar" }, { title: "Koleksi Saya", detail: "Atur komik sesuai daftar pribadi", href: "/collections" }, { title: "Dukung PerDex", detail: "Bantu pengembangan website", href: "/donasi" }].map((item) => <Link key={item.href} href={item.href} className="rounded-2xl border border-violet-300/15 bg-[#100d18] p-4 transition hover:border-violet-300/35 hover:bg-violet-300/[0.05]"><p className="text-sm font-bold text-white">{item.title} →</p><p className="mt-1 text-xs text-slate-500">{item.detail}</p></Link>)}
+          {[{ title: "Trending Komik", detail: "Lihat bacaan yang sedang populer", href: "/discover" }, { title: "Koleksi Saya", detail: "Atur komik sesuai daftar pribadi", href: "/collections" }, { title: "Dukung PerDex", detail: "Bantu pengembangan website", href: "/donasi" }].map((item) => <Link key={item.href} href={item.href} className="rounded-2xl border border-violet-300/15 bg-[#100d18] p-4 transition hover:border-violet-300/35 hover:bg-violet-300/[0.05]"><p className="text-sm font-bold text-white">{item.title} →</p><p className="mt-1 text-xs text-slate-500">{item.detail}</p></Link>)}
         </section>
 
-        <section className="mt-12 min-w-0 sm:mt-16">
-          <SectionHeading title="Pilihan PerDex" subtitle="Koleksi pilihan yang sedang ditampilkan." />
-          <Carousel apiPath="/api/perdex/projectupdated" />
-        </section>
         <section className="mt-12 min-w-0 sm:mt-16">
           <SectionHeading title="Update terbaru" subtitle="Lihat komik yang baru saja diperbarui." href="/latestupdated" />
           <Carousel apiPath="/api/perdex/lastupdated?page=1" />

@@ -6,6 +6,5 @@ export const navlink = [
   { path: "/manhua", name: "Manhua" },
   { path: "/genre", name: "Genre" },
   { path: "/history", name: "History" },
-  { path: "/calendar", name: "Kalender" },
 ];
 export const navlinkMobile = navlink;

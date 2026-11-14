@@ -30,7 +30,6 @@ Do not commit `.env.local` or credentials to Git.
 
 ## Main API routes
 
-- `GET /api/perdex/projectupdated`
 - `GET /api/perdex/lastupdated?page=1`
 - `GET /api/perdex/advsearch?type=manga&page=1`
 - `GET /api/perdex/search?q=naruto`
@@ -58,5 +57,6 @@ npm start
 - **Acak Komik**: tombol di beranda memilih satu komik dari update terbaru.
 - **Mode Fokus dan Auto-scroll**: kontrol tambahan tersedia di halaman reader.
 - **Infinite Chapter Scroll**: khusus Fokus Mode, chapter berikutnya otomatis dimuat saat pembaca mendekati akhir chapter, lalu tersambung tanpa reload halaman.
+- **Admin Page**: panel privat untuk akun Google `brooscraft9@gmail.com`, dengan moderasi review, penanganan laporan, dan pemeriksaan REST API. Jalankan `SUPABASE-ADMIN-PERDEX.sql` setelah mengaktifkan Google OAuth.
 
 Rincian penggunaan dan endpoint tersedia di `README-FEATURES.md`.
